@@ -1,0 +1,21 @@
+package packagecom.numbers;
+
+import java.util.Arrays;  // <-- Add this import
+import java.util.Scanner;
+
+public class class1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the size of the arrya");
+		int size=sc.nextInt();
+		
+		int arr[] = new int[size];//6
+		System.out.println("enter the elements");
+		for(int i=0;i<arr.length;i++) {
+			//System.out.println(arr[i]);
+			arr[i]=sc.nextInt();
+			
+		}
+		System.out.println(Arrays.toString(arr));  // Correct usage
+	}
+}

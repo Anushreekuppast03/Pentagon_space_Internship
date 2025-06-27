@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // setInterval()
+    // By using this method we can call the function after every time interval.
+    // The setInterval consists of two parameters:
+    // 1. callback function
+    // 2. time in milliseconds
+
+    // how to stop interval()
+    //when we need to stop the interval() we should use
+    // clearinterval()
+    //every setinterval() will  return 1 id we need that
+    //id in order to cler the interval
+
+    //clear interval() accept the ID as a parameter
+    let sayHello = () => {
+        alert("Hello how are you");
+    }
+
+  //  setInterval(sayHello, 3000); // Calls sayHello every 3 seconds
+
+  
+  let timerId = setInterval(sayHello, 3000);
+
+setTimeout(() => {
+    clearInterval(timerId);
+    alert("setInterval stopped");
+}, 9000); // stops the interval after 9 seconds
+</script>
+
+</body>
+</html>

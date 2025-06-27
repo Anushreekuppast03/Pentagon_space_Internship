@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div onsubmit="">
+      <!-- This event handler is used in form submission to do the form validation -->
+      <form onsubmit="validateForm()">
+        <label>Name: <input type="text" name="name"></label><br>
+        <label>Email: <input type="text" name="email"></label><br>
+        <input type="submit" value="submit">
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        let name = document.getElementsByName('name')[0].value;
+        let email = document.getElementsByName('email')[0].value;
+        if(name == "" || email == "") {
+          alert("Name and Email must be filled out");
+        }
+        else{
+            alert("form submittted sucessfully")
+        }
+      }
+    </script>
+  </body>
+</html>

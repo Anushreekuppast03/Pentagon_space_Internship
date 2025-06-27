@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fix</title>
+    <script>
+        // Variable declaration
+        let a = 45;
+        a = 4354 + 4;
+        console.log(a); // Output: 4358
+
+        // Function definition
+        function hello() {
+            console.log("Hi Anu");
+        }
+
+        // Object with a method
+        let b = {
+            r: 98,
+            t: 87,
+            func: function (number) {
+                console.log("The num is " + number);
+            }
+        };
+
+        // Call the function with a number
+        b.func(42); // Output: The num is 42
+
+        // Event Listener Fix
+        document.addEventListener("click", function () {
+            console.log("Clicked");
+            let conf = confirm("Are you sure?");
+            console.log(conf);
+        });
+    </script>
+</head>
+<body>
+    <h1>I am learning JS</h1>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        // Adding event listener to a button instead of document
+        document.getElementById("myButton").addEventListener("click", function () {
+            console.log("Button Clicked");
+            let conf = confirm("Are you sure?");
+            console.log(conf);
+        });
+    </script>
+</body>
+</html>

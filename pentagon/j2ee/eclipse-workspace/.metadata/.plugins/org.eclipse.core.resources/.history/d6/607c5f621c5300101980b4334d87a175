@@ -1,0 +1,5 @@
+package packagecom.numbers;
+
+public class SumOfEvenElements {
+
+}

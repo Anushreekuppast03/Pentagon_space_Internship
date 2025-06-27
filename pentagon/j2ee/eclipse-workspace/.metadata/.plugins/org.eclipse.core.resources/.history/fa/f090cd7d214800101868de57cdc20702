@@ -1,0 +1,33 @@
+package in.ps.jdbcsteps;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCDemo {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		// TODO Auto-generated method stub
+		Connection con=null;
+		String url="jdbc:mysql://localhost:3306";
+		String user="root";
+		String password="Anu@2003";
+		//step 1(loading & registering a driver class jdbc api to jdbc driver implementation
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("driver loaded successfully");
+	
+	
+	
+	
+	//2nd step establish connection b/w java & dB
+	
+ con=DriverManager.getConnection(url,user,password);
+	System.out.println("connection established successful");
+	}
+//jdbc:mysql://198:136.111.2013306?user=root & password=Anu@2003
+catch(ClassNotFoundException | SQLException e) {
+	e.printStackTrace();
+}
+}
+}

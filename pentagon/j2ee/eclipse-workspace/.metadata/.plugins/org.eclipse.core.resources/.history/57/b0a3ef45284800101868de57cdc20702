@@ -1,0 +1,46 @@
+package in.ps.jdbcsteps;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBCDemo {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		// TODO Auto-generated method stub
+		Connection con=null;
+		Statement stmt=null;
+		String url="jdbc:mysql://localhost:3306/PENTAGON";
+		String user="root";
+		String password="Anu@2003";
+		String query="INSERT INTO STUDEN (SID,SNAME,PHONE,MAIL,BRANCH LOC)VALUES"
+				+"(1,'MEGHA',9900112233,'megha@gmail.com','ece','HUBLI')";
+		//step 1(loading & registering a driver class jdbc api to jdbc driver implementation
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("driver loaded successfully");
+	
+	
+	
+	
+	// step 2nd: establish connection b/w java & dB
+	
+          con=DriverManager.getConnection(url,user,password);
+	      System.out.println("connection established successful");
+
+//jdbc:mysql://198:136.111.2013306?user=root & password=Anu@2003
+	
+	//step 3:creating a platform to execute sql exception
+	     stmt=con.createStatement();
+	     System.out.println("platform created successfully");
+	
+	//step 4:execting the sql queries
+	  boolean res =stmt.execute(query);
+	  System.out.println(res);
+	}	     
+catch(ClassNotFoundException | SQLException e) {
+	e.printStackTrace();
+}
+}
+}

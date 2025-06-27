@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>class selector</h2>
+    <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptate suscipit odit, quaerat quae est perspiciatis doloribus eum animi qui, aut aliquam. Impedit nam ullam cumque, iste sed dolores quos?</p>
+    <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse dolorum ab corporis at voluptate. Inventore ratione magni ut. Laudantium cupiditate enim quo animi vitae quasi officiis eum beatae veritatis necessitatibus?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe provident quisquam ab vero deserunt, accusantium iusto esse distinctio? Voluptate dolore fugiat blanditiis omnis minima aspernatur nulla tenetur eaque consequatur pariatur.</p>
+    <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit voluptatum rerum tempore voluptatibus cupiditate? Facere aspernatur amet ipsum, molestias minus ex quibusdam vel ratione culpa harum totam saepe magnam neque?</p>
+    <p  id="one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem soluta officiis quisquam excepturi, necessitatibus et cupiditate rem! Voluptas voluptates deserunt ipsam suscipit? Beatae quae recusandae quis veritatis delectus tenetur enim!</p>
+    <script>
+    let p1ref=document.getElementsByClassName('p1')
+    console.log(p1ref)
+    p1ref[0].style.color="green"
+    p1ref[1].style.backgroundColor="yellow"
+    p1ref[1].style.color="red"
+    let pref=document.getElementById('one')
+    pref.style.backgroundColor="grey"
+    pref.style.border="5px dashed blue"
+    pref.style.color="orange"
+    pref.style.fontSize="xx-large"
+    </script>
+</body>
+</html>

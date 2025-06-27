@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 40px;
+            text-align: center;
+        }
+        button{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <img id="img" src="https://www.liblogo.com/img-logo/re269re79-react-logo-react-logo-.png" alt="" height="300" width="300">
+    <br>
+    <button onclick="changeReact()">React</button>
+    <button onclick="changeAngular()">Angular</button>
+
+  </div>
+  <script>
+    function changeAngular(){
+      let imgref=document.getElementById('img')
+      imgref.src='https://www.sharpquest.com/media/1654/angular-best-practice-image.png'
+    }
+    function changeReact(){
+        let imgref=document.getElementById('img')
+        imgref.src="https://www.liblogo.com/img-logo/re269re79-react-logo-react-logo-.png"
+      }
+  </script>
+
+</body>
+</html>

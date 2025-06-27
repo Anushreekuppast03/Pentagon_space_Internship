@@ -1,0 +1,36 @@
+/*
+//diff b/w inner html & tect contant
+//inner html:if u have any html tag inside text contant while using inner html it will recognize th etag and  it will print
+*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="o">welcome to my home</h1>
+    <button onclick="change()">Click</button>
+    <h2 id="t"></h2> 
+    <p id="e"></p>
+    <h3 id="f"></h3>
+
+    <script>
+        // Using document.getElementById() to access and modify elements by ID
+        function change() {
+            let h1ref = document.getElementById('o');
+            h1ref.textContent = "Welcome to class";
+
+            let h2ref = document.getElementById('t');
+            h2ref.innerHTML = "Welcome to my room";
+
+            let pref = document.getElementById('e');
+            pref.textContent = "Thank you for visiting";
+
+            let poref = document.getElementById('f');
+            poref.innerHTML = "<i>hi.hello</i>"; // using innerHTML to include italics
+        }
+    </script>
+</body>
+</html>

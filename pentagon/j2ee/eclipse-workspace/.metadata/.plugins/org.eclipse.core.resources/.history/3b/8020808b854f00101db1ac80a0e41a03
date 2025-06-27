@@ -1,0 +1,5 @@
+package in.pentagon.studentApp.model;
+
+public class Login {
+
+}

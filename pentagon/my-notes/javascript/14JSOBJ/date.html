@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object</title>
+</head>
+<body>
+    <!-- Date Object -->
+    <!-- When we need to know about the date, we should use Date
+         object. It gives information regarding Day, Month, Year, 
+         Hours, Minutes, Seconds, and Time Zone. -->
+
+    <script>
+        //1
+        var date = new Date();  // creates a new date object
+        console.log(date);      // prints the current date and time
+
+        // 2 To get just the current date
+        let currentDate = date.getDate();
+        console.log(currentDate); // prints the current day of the month
+
+        // 3 To get the current month (Note: months are 0-indexed)
+        let currentMonth = date.getMonth();
+        console.log(currentMonth);
+         //4 getday() is used to get cur day
+
+    let day = date.getDay();
+console.log(day)
+
+//5getfullyear()
+let year = date.getFullYear();
+console.log(year)
+//gethr
+let hr = date.getHours();
+console.log(hr)
+//GETMIN
+let MIN = date.getMinutes();
+console.log(MIN)
+//GETSEC
+let SEC = date.getSeconds();
+console.log(SEC)
+    </script>
+
+   
+</body>
+</html>

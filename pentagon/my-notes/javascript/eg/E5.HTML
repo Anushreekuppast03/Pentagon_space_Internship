@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mouse Events</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: RED;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- onmouseover and onmouseout events -->
+    <!-- These are the events related to mouse movement activity -->
+
+    <!-- onmouseover: when we take the cursor on any web element, it gets triggered -->
+    <!-- onmouseout: when we take the cursor away from the web element, it gets triggered -->
+
+    <div class="box" id="box" onmouseover="mouseOver()" onmouseout="mouseOut()">
+        Hover over me!
+    </div>
+
+    <script>
+        function mouseOver() {
+            document.getElementById('box').style.backgroundColor = "blue";
+        }
+
+        function mouseOut() {
+            document.getElementById('box').style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

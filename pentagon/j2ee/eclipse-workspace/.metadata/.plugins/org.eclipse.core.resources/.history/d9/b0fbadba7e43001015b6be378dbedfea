@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class Product {
+    String name;
+    double price;
+
+    static double totalValue = 0;
+    static double taxRate;
+
+    // Static block to initialize default tax rate
+    static {
+        taxRate = 0.18; // 18% tax
+    }
+
+    // Constructor to create product and update total value
+    Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+        totalValue += price;
+    }
+
+    // Static method to compute total value with tax
+    static double computeTotalWithTax() {
+        return totalValue + (totalValue * taxRate);
+    }
+}
+
+public class InventorySystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of products: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println("\nProduct " + i);
+            System.out.print("Enter product name: ");
+            sc.nextLine(); // Consume leftover newline
+            String name = sc.nextLine();
+            System.out.print("Enter product price: ");
+            double price = sc.nextDouble();
+
+            new Product(name, price);
+        }
+
+        // Display totals
+        System.out.println("\nTotal Value (excluding tax): ₹" + Product.totalValue);
+        System.out.println("Total Value (including tax): ₹" + Product.computeTotalWithTax());
+
+        sc.close();
+    }
+}
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Handling</title>
+</head>
+<body>
+
+  <select onchange="changeOption(event)">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+  </select>
+
+  <br><br>
+
+  <input type="radio" name="gender" value="male" onchange="genderOption(event)"> Male
+  <input type="radio" name="gender" value="female" onchange="genderOption(event)"> Female
+
+  <script>
+    function changeOption(event) {
+      alert("Option changed to: " + event.target.value);
+    }
+
+    function genderOption(event) {
+      alert("Gender selected: " + event.target.value);
+    }
+  </script>
+
+</body>
+</html>
+
+// onchangeevent get called upon changing of drop down option

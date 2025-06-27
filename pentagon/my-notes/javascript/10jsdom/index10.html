@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="one" type="radio">
+    <img id="img" height="300" width="200" src="https://tinyjpg.com/images/social/website.jpg" alt="Image description">
+
+    <script>
+        // Getting 'type' attribute of input element
+        let inputref = document.getElementById('one');
+        let res = inputref.getAttribute('type');
+        console.log(res); // Should print "radio"
+
+        // Getting 'src' attribute of img element
+        let imgref = document.getElementById('img');
+        let result = imgref.getAttribute('src');
+        console.log(result); // Should print "website.jpg"
+    </script>
+    
+</body>
+</html>

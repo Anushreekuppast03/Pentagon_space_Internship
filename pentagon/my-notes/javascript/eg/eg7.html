@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- we can listen to events through JavaScript -->
+
+    <!-- we can listen to events programmatically by using addEventListener() -->
+    <!-- addEventListener accepts 2 parameters -->
+    <!-- syntax: element.addEventListener(event, callback) -->
+
+    <button id="btn">Submit</button>
+    <br><br>
+
+    <label for="dropdown">Change Background:</label>
+    <select id="dropdown">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        alert("Button Clicked");
+      })
+      document.getElementById("dropped").addEventListener('CHANGE',(event)=>(
+        alert("the value is"+event.target.value)
+      ))
+    </script>
+  </body>
+</html>

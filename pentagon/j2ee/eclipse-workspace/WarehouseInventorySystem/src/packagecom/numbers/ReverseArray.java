@@ -1,0 +1,24 @@
+package packagecom.numbers;
+
+import java.util.Arrays;
+
+public class ReverseArray {
+    public static void reverse(int[] res) {  // res holds address 1000
+        int i = 0;
+        int j = res.length - 1;
+        while (i < j) {
+            int temp = res[i];
+            res[i] = res[j];                 // address 1000 is modified
+            res[j] = temp;
+            i++;
+            j--;
+        }
+        System.out.println("Res : " + Arrays.toString(res));  // res is pointing to same address
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {12, 23, 34, 45, 56, 67, 78, 89};
+        reverse(arr); // address of arr is passed ex 1000
+        System.out.println("arr : " + Arrays.toString(arr)); // arr is pointing to same address
+    }
+}
