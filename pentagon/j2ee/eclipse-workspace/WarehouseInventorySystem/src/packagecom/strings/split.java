@@ -1,0 +1,18 @@
+package packagecom.strings;
+
+import java.util.Arrays;
+public class split {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s= "welcome to the class";
+String res="";
+String arr[]=s.split(" ");
+System.out.println(Arrays.toString(arr));
+for(int i=arr.length-1;i>=0;i--) {
+	res+=(arr[i]+" ");
+	//System.out.print(arr[i]+" ");
+}System.out.println(res);
+	}
+
+}

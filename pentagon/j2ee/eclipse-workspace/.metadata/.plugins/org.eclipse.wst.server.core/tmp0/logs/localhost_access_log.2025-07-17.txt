@@ -1,0 +1,6 @@
+127.0.0.1 - - [17/Jul/2025:22:42:00 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [17/Jul/2025:22:42:02 +0530] "GET /StudentApps/ HTTP/1.1" 200 1079
+0:0:0:0:0:0:0:1 - - [17/Jul/2025:22:42:02 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [17/Jul/2025:22:42:10 +0530] "POST /StudentApps/login HTTP/1.1" 200 1920
+0:0:0:0:0:0:0:1 - - [17/Jul/2025:22:42:12 +0530] "GET /StudentApps/updateAccount.jsp HTTP/1.1" 200 1543
+0:0:0:0:0:0:0:1 - - [17/Jul/2025:22:42:16 +0530] "POST /StudentApps/updateAccount HTTP/1.1" 200 1543

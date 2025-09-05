@@ -1,0 +1,38 @@
+package in.com.java8;
+
+
+interface Vtu {
+	double fee=49999.99;
+	//public static finalfee=49999.99;
+	//int a;//cte
+	void fee();
+	//public abstract void fee();
+}
+class GECHH implements Vtu{
+	@override
+	public void fee() {
+		System.out.println("fee"+fee);
+	}
+	void add()
+	{
+		System.out.println("java");
+	}
+
+}
+
+public class Priynka {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Vtu v1=new Vtu();//CTE//
+		Vtu v=new GECHH();//upcasting
+		v.fee();
+		GECHH g=new GECHH();
+		g.fee();
+		g.add();
+		//v.add();//CTE
+		((GECHH)(v)).add();//downcasting
+
+	}
+
+}

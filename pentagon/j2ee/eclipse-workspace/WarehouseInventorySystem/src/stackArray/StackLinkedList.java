@@ -1,0 +1,76 @@
+package stackArray;
+class Node{
+	int data;
+	Node next;
+
+	Node(int data){
+		this.data=data;
+		this.next=null;
+		
+	}
+}
+
+public class StackLinkedList {
+Node top;
+public void push(int data) {
+	Node temp=new Node(data);
+	temp.next=top;
+	top=temp;
+}
+public int pop() {
+	if(top==null) {
+		System.out.println("underflow exc");
+		return -1;
+		
+	}
+	int val=top.data;
+	top=top.next;
+	return val;
+}
+public int peek() {
+	if(top==null) {
+		System.out.println("stack is already emp");
+		return -1;
+		
+	}
+	return top.data;
+}
+public boolean isEmpty() {
+	return (top ==null);
+}
+public void print_stack() {
+	Node curr =top;
+	while(curr!=null) {
+		System.out.println(curr.data+"-->");
+		curr=curr.next;
+	}
+	System.out.println();
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StackLinkedList st= new StackLinkedList();
+		st.push(10);
+		st.push(20);
+		st.push(30);
+		st.push(40);
+		st.push(50);
+		
+		//st.push(60);
+
+		// Pop elements
+		System.out.println("Popped: " + st.pop()); // 50
+		System.out.println("Popped: " + st.pop()); // 40
+
+		// Peek element
+		System.out.println("Peek: " + st.peek());  // 30
+
+		// Pop remaining
+		System.out.println("Popped: " + st.pop()); // 30
+		System.out.println("Popped: " + st.pop()); // 20
+		System.out.println("Popped: " + st.pop()); // 10
+
+		// Try popping from empty stack
+		System.out.println("Popped: " + st.pop());
+	}
+
+}

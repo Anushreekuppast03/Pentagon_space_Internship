@@ -1,0 +1,27 @@
+package packagecom.strings;
+
+public class reversc {
+	public static void method(String word) {
+		String res="";
+		for(int i=0;i<word.length();i++) {
+			if(i==word.length()-1) {
+			res=(char)(word.charAt(i))+res;
+			}
+			else {
+				res=word.charAt(i)+res;
+			}
+		}
+		return;}
+public static void main(String[] args) {
+	
+		// TODO Auto-generated method stub
+		String s="welcome to the class";
+		System.out.println(s);
+		String[] arr=s.split(" ");
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(method(arr[i])+" ");
+		}
+			
+
+	}
+}

@@ -1,0 +1,12 @@
+package packagecom.strings;
+
+import java.util.Arrays;
+
+public class OUTPUT {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}

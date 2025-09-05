@@ -1,0 +1,29 @@
+package in.com.java8;
+
+interface VTU_MYS{
+	int total_branch_count=10;
+	
+
+default void cse_fee() {
+	System.out.println("80k");
+	System.out.println(total_branch_count);
+	Drives_count();
+	Drives_count1();
+}
+static void Location() {
+	System.out.println("Mysore");
+	
+	System.out.println(total_branch_count);
+	//Drives_count();
+	Drives_count1();
+	//cse_fee();
+}
+private 
+public class Anu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

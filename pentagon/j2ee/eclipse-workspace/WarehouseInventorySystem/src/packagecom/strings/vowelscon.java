@@ -1,0 +1,33 @@
+package packagecom.strings;
+
+public class vowelscon {
+//3
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s= "pen  tA%%]]}gon";
+int v_count=0;
+int c_count=0;
+
+int s_count=0;
+for (int i=0;i<s.length();i++) {
+	char ch=s.charAt(i);
+	if(ch>=97 &&ch<=122||ch>=63 &&ch <=90 ||ch==32) {
+	if(ch=='a'||ch=='o'||ch=='i'||ch=='e'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='0'||ch=='U') {
+		v_count++;
+		
+	}
+	else if(ch==32) {
+		s_count++;
+		
+	}
+	else{
+		c_count++;
+	}}
+}
+
+System.out.println("vowel  :"+v_count);
+System.out.println("consonent  :"+c_count);
+System.out.println("space  :"+s_count);
+	}
+
+}

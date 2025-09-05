@@ -1,0 +1,31 @@
+package packagecom.strings;
+//6
+
+
+public class swap {
+public static String toUpper(String s){
+	String res="";
+	for(int i=0;i<s.length();i++) {
+		char ch= s.charAt(i);
+		if(ch>=97 && ch<=122) {
+			
+			char nch=(char)(ch-32);
+			res+=(nch);
+		}
+		else {
+			char nch=(char)(ch+32);
+			res+=(nch);
+			
+		}
+	}
+	return res;
+}
+public static void main(String[] args) {	// TODO Auto-generated method stub
+String s="PenTaGoN";
+
+String res=toUpper(s);
+System.out.println(res);
+
+}
+
+}

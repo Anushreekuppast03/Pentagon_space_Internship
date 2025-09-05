@@ -1,0 +1,35 @@
+
+package packagecom.strings;
+
+
+public class longpallindromsub{
+
+	public static String rev(String s) {
+		String res="";
+		for(int i=0;i<s.length();i++){
+			res=s.charAt(i)+res
+;		}
+		return res;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="malayalam";
+String len="";
+int Lps=0;
+for(int i=0;i<s.length();i++) {
+	for(int j=i;j<s.length();j++) {
+		String res="";
+		for(int k=i;k<=j;k++) {
+			res+=s.charAt(k);
+		}
+		if(res.equals(rev(res))){
+			if(res.length()>Lps) {
+				len=res;
+				Lps=res.length()
+;			}
+		}
+	}
+}System.out.println(len);
+	}
+
+}

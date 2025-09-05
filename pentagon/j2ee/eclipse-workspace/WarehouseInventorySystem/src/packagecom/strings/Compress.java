@@ -1,0 +1,27 @@
+package packagecom.strings;
+
+//Compress.java
+public class Compress {
+ 
+ public static String compress(String s) {
+     String res = "";
+     int count = 1;
+
+     for (int i = 1; i <= s.length(); i++) {
+         if (i < s.length() && s.charAt(i) == s.charAt(i - 1)) {
+             count++;
+         } else {
+             res = res + s.charAt(i - 1) + count;
+             count = 1;
+         }
+     }
+
+     return res;
+ }
+
+ public static void main(String[] args) {
+     String s = "aaaabbccc";
+     String result = compress(s);
+     System.out.println("Compressed String: " + result);
+ }
+}

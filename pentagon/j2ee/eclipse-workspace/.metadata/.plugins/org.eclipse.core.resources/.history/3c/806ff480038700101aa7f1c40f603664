@@ -1,0 +1,71 @@
+package com.in.doubl;
+
+
+
+class Node {
+    int data;
+    Node next;
+    Node prev; 
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+        this.prev = null;
+    }
+}
+
+class DLinkedList {
+    Node head;
+    Node tail;
+
+    public void add_last(int data) {
+        Node temp = new Node(data);
+        if (head == null) {
+            head = tail = temp;
+        } else {
+            tail.next = temp;
+            temp.prev = tail;
+            tail = temp;
+        }
+    }
+    
+    public void add_first(int data) {
+		Node temp=new Node(data);
+		 if (head == null) {
+	            head = tail = temp;
+	        } else {
+		temp.next=head;
+		head.prev=temp;
+		head=temp;
+	}
+    }
+    public void print_LL() {
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.next;
+        }
+        System.out.println();
+    }
+    public void print_LLR() {
+        Node curr = tail;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.prev;
+        }
+        System.out.println();
+    }
+}
+
+public class Doublelist {
+    public static void main(String[] args) {
+        DLinkedList dll = new DLinkedList();
+        dll.add_last(10);
+        dll.add_last(20);
+        dll.add_last(30);
+        dll.add_first(5);
+      dll.print_LL();
+        dll.print_LLR();
+        dll.print_LL();// Output: 10 2zz30
+    }
+}

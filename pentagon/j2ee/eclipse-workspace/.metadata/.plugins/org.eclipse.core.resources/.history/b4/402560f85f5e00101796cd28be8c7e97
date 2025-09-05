@@ -1,0 +1,21 @@
+package packagecom.strings;
+
+public class eg {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="pentagon";
+char [] ch= s.toCharArray();
+System.out.println(ch);
+char ca= s.charAt(4);
+System.out.println(ca);
+String up=s.toLowerCase();
+System.out.println(up);
+String uu=s.toUpperCase()
+;
+System.out.println(uu);
+System.out.println(s.length());
+
+	}
+
+}
